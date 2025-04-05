@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 const generateToken = (user) => {
-    const secret = process.env.JWT_SECRET || "your-secret-key";
+    const secret = process.env.JWT_SECRET || "oHwJPyRzP5P58GXyAoCDYoTS3gX0GDfx";
     delete user.password;
     return jwt.sign({
         id: user._id,
