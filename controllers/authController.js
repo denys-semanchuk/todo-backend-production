@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import bcrypt from "bcrypt";
-import UserModel from "../models/User";
-import generateToken from "../utils/generateToken";
+import UserModel from "../models/User.js";
+import generateToken from "../utils/generateToken.js";
 import jwt from 'jsonwebtoken';
 export const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { email, password, username } = req.body;

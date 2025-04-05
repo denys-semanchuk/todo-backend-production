@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import jwt from 'jsonwebtoken';
-import UserModel from '../models/User';
+import UserModel from '../models/User.js';
 export const protect = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     try {

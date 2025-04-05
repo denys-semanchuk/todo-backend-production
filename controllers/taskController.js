@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import Task, { Priority } from "../models/Task";
+import Task, { Priority } from "../models/Task.js";
 export const getTasks = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     try {

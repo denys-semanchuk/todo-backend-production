@@ -1,6 +1,6 @@
 import express from "express";
-import { protect } from "../middleware/protectMiddleware";
-import { getTasks, createTask, deleteTask, updateTaskText, toggleImportant, toggleCompleted, togglePriority, deleteCompletedTasks, } from "../controllers/taskController";
+import { protect } from "../middleware/protectMiddleware.js";
+import { getTasks, createTask, deleteTask, updateTaskText, toggleImportant, toggleCompleted, togglePriority, deleteCompletedTasks, } from "../controllers/taskController.js";
 const router = express.Router();
 router.use(protect);
 router.get("/", protect, getTasks);
