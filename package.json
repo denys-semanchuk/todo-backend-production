@@ -1,0 +1,21 @@
+{
+  "name": "dist",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denys-semanchuk/todo-backend-production.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denys-semanchuk/todo-backend-production/issues"
+  },
+  "homepage": "https://github.com/denys-semanchuk/todo-backend-production#readme",
+  "description": ""
+}
