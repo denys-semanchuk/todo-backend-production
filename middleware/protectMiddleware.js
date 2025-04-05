@@ -17,7 +17,7 @@ export const protect = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
             res.status(401).json({ message: 'Not authorized, no token' });
             return;
         }
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'oHwJPyRzP5P58GXyAoCDYoTS3gX0GDfx');
         const user = yield UserModel.findById(decoded.id).select('-password');
         if (!user) {
             res.status(401).json({ message: 'Not authorized, token failed' });

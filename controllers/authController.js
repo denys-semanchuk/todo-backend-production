@@ -12,6 +12,7 @@ import UserModel from "../models/User.js";
 import generateToken from "../utils/generateToken.js";
 import jwt from 'jsonwebtoken';
 export const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log("Registering user");
     const { email, password, username } = req.body;
     try {
         const existingUser = yield UserModel.findOne({ email });
@@ -87,7 +88,7 @@ export const verifyToken = (req, res) => __awaiter(void 0, void 0, void 0, funct
         return;
     }
     try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.JWT_SECRET ||  'oHwJPyRzP5P58GXyAoCDYoTS3gX0GDfx');
         const user = yield UserModel.findById(decoded.id);
         if (!user) {
             res.status(404).json({ message: "User not found" });
